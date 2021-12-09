@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="centralForm">
+<form  action="/comments/{{comment_workout.workout_id}}" method="POST" id="formElement1">
+  <div class="form-group mb-2 mx-sm-3">
+      <span">Your comment is: </span>
+      <input type="text" readonly class="form-control-plaintext" id="submittedComment" value="{{comment_workout.comments}}">
+      <label for="comments">Comment</label>
+      <input class="form-control" type="text" name="comments" placeholder="Your new comment">
+      <button class="btn btn-info mt-2">Change Comment</button>
+  </div>
+</form>
+</div>
+{% endblock %}

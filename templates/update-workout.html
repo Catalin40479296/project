@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <form class="form-inline" action="/update/{{changed_workout.workout_id}}" method="POST" id="formElement">
+        <div class="form-group mb-2 mx-sm-3">
+            <label for="exercise">Exercise</label>
+            <input class="form-control" type="text" name="exercise" value="{{changed_workout.exercise}}">
+        </div>
+        <div class="form-group mb-2 mx-sm-3">
+            <label for="focus">Muscle Area</label>
+            <input class="form-control" type="text" name="focus" value="{{changed_workout.focus}}">
+        </div>
+        <div class="form-group mb-2 mx-sm-3">
+            <label for="reps">Reps</label>
+            <input class="form-control" type="text" name="reps" value="{{changed_workout.reps}}">
+         </div>
+        <button class="btn btn-warning mx-sm-3" type="submit" >Update exercise</button>
+            
+    </form>
+</div>
+
+{% endblock %}

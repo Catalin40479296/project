@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="alert alert-warning container-fluid text-center">Workouts are added periodically, if you can't find what you are looking for, stay tunned as it may be added at this moment!</div>
+
+<div class="jumbotron">
+    <h1>Workout page</h1>
+    <h4>Find the workout based on the muscle group</h4>
+</div>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-4">
+            <div class="card" style="width: 18rem; border:none;">
+                <img class="card-img-top" src="{{ url_for('static', filename='chest.jpg')}}" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text"><strong>Chest Workout </strong><br> Check out the latest added workouts</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card" style="width: 18rem; border:none;">
+                <img class="card-img-top" src="{{ url_for('static', filename='armWorkout.jpg')}}" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text"><strong>Arm Workout </strong><br> Check out the latest added workouts</p>
+                </div>
+              </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card" style="width: 18rem; border:none;">
+                <img class="card-img-top" src="{{ url_for('static', filename='backWorkout.jpg')}}" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text"><strong>Back Workout </strong><br> Check out the latest added workouts</p>
+                </div>
+              </div>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}

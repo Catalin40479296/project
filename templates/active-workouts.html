@@ -1,0 +1,76 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+    
+<div class="jumbotron">
+        <h1 class="text-center">Hello {{ name }}, welcome to EzWorkThisOut!</h1>
+    <div class="text-center"> 
+        <p>Today date:{{ today }}  Weather: COLD!!! Make sure you take your jacket</p>
+        <h5>Today exercises</h5>
+    </div>
+</div>
+<div class="mainArea">
+    <div class="wrapper">
+	    {% for toDoWorkouts in current_workouts %} 
+        <div class="item row"
+        {% if toDoWorkouts.complete == True %}
+         style="background-color: #43C59E !important;"
+            {% endif %}
+            > 
+            
+            
+            <div class="col-sm-3">
+                <span class="exercise">{{toDoWorkouts.exercise}}</span> 
+            </div>
+            <div class="col-sm-3">
+                <span class="reps">x {{toDoWorkouts.reps}}</span>
+            </div>
+            <div class="col-sm-3">
+                <span class="comments">Comments: {{toDoWorkouts.comments}}</span>
+            </div>
+                <span class="hidden">{{toDoWorkouts.workout_id}}</span>
+       
+            <div class="icons col-sm-3 text-end">
+                <i class="fas fa-arrows-alt-v"></i>
+                <a href="/comments/{{toDoWorkouts.workout_id}}"><i class="fas fa-comment"></i></a>
+                <a href="/delete/{{toDoWorkouts.workout_id}}"><i class="fas fa-trash-alt"></i></a>
+                <a href="completed/{{toDoWorkouts.workout_id}}" style="color:ffffff !important" type="submit"><i class="far fa-check-circle"></i></a>
+               <a href="/update/{{toDoWorkouts.workout_id}}"><i class="far fa-edit"></i></a> 
+            </div>
+	</div>
+       
+	    {% endfor %}
+        
+        
+    
+        <form class="form-inline" action="add-workout" method="POST">
+            <div class="form-group mb-2">
+                <label for="exercise">Exercise</label>
+                <input class="form-control" type="text" name="exercise" placeholder="Exercise name">
+            </div>
+                <div class="form-group mb-2">
+                <label for="focus">Muscle Group</label>
+                <input class="form-control" type="text" name="focus" placeholder="Focus area">
+            </div>
+            <div class="form-group mb-2">
+                <label for="reps">Reps</label>
+                <input class="form-control" type="text" name="reps" placeholder="How many reps">
+            </div> 
+            <button class="btn btn-success" type="submit" >Add exercise</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+    <script>
+        const dragArea = document.querySelector(".wrapper");
+        new Sortable(dragArea, {
+            animation: 350
+        });
+    
+    </script>
+
+
+{% endblock %}

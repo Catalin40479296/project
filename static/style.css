@@ -1,0 +1,113 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html, body{
+    background-color: #fe5f55;
+}
+
+.wrapper{
+    padding:25px;
+    max-width: 90%;
+    width: 100%;
+    border-radius: 3px;
+    margin:auto;
+}
+
+.wrapper .item{
+    background-color:#4f6367;
+    color:#fff;
+    display: flex;
+    border-radius:3px;
+    padding:12px 17px;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+.wrapper .item .text{
+    font-size: 18px;
+    font-weight: 400;
+
+}
+.wrapper .item i{
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.icons{
+    margin-left: auto;
+    justify-content: space-between;
+}
+.icons .fas{
+    margin-right:3px;
+    color:#fff !important;
+}
+
+.wrapper a{
+    color:#fff !important;
+}
+
+.show{
+    display:block;
+}
+.hidden{
+    display:none;
+}
+
+.exercise{
+    color:#fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.navbar-dark{
+    background-color: #4f6367 !important;
+}
+
+.navbar a{
+color:#fff !important;
+}
+
+.reps{
+    color:rgb(195, 229, 252);
+    font-size: 1rem;
+}
+.comments{
+    margin-left:10%;
+}
+
+.jumbotron{
+    height:300px;
+    text-align: center;
+    padding-top:5%;
+    margin-bottom:5%;
+    border-radius: 4px;
+    color:#fff;
+}
+.mainArea{
+    border:1px;
+    border-radius: 5px;
+}
+
+.btn-success{
+background-color: #43C59e !important;
+}
+
+.centralForm{
+    width:50%;
+    margin:10% auto 10% auto;
+}
+
+.footer{
+    position: fixed;
+    height:6%;
+    bottom:0;
+    width: 100%;
+    background-color: #4f6367;
+    color:#fff;
+}
+
+#copyright{
+    margin: 15px 10px 0px 0px;
+}

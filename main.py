@@ -8,8 +8,12 @@ from models import ActiveWorkouts
 main = Blueprint('main', __name__)
 
 
-#index page, rendering active workouts and giving date, workouts found on the user id and the name of the user
+#index page, rendering active workouts and giving date, workouts found on the user id and the name of the use
 @main.route('/')
+def index():
+     return render_template('login.html')
+
+@main.route('/active-workouts')
 @login_required
 def active_workouts():
     current_workouts = ActiveWorkouts.query.filter_by(username = current_user.name)

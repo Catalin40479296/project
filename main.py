@@ -1,9 +1,8 @@
 from flask import Blueprint, render_template, request, redirect, url_for
 from flask_login import login_required, current_user
 from datetime import date
-from init import db, create_app
+from init import db
 
-app=create_app()
 
 from models import ActiveWorkouts
 

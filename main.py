@@ -1,10 +1,10 @@
 from flask import Blueprint, render_template, request, redirect, url_for
 from flask_login import login_required, current_user
 from datetime import date
-from init import db, create_app
+from init import db 
+
 
 from models import ActiveWorkouts
-app=create_app()
 
 main = Blueprint('main', __name__)
 
@@ -12,7 +12,7 @@ main = Blueprint('main', __name__)
 
 #index page, rendering active workouts and giving date, workouts found on the user id and the name of the use
 @main.route('/')
-def index(app):
+def index():
      return render_template('login.html')
 
 @main.route('/active-workouts')

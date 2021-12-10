@@ -8,12 +8,9 @@ from models import ActiveWorkouts
 main = Blueprint('main', __name__)
 
 
-
-@main.route('/', default={'path':''})
-
 #index page, rendering active workouts and giving date, workouts found on the user id and the name of the use
-@main.route('/<path:path>')
-def index(path):
+@main.route('/')
+def index():
      return render_template('login.html')
 
 @main.route('/active-workouts')

@@ -10,7 +10,7 @@ main = Blueprint('main', __name__)
 
 #index page, rendering active workouts and giving date, workouts found on the user id and the name of the use
 @main.route('/')
-def index():
+def index(app):
      return render_template('login.html')
 
 @main.route('/active-workouts')

@@ -1,10 +1,10 @@
-from flask import Flask, os
+from flask import Flask
 from flask_sqlalchemy import SQLAlchemy 
 from flask_login import LoginManager 
 
 db = SQLAlchemy()
 
-app = Flask(__name__, static_folder=os.path.abspatch("/static"), static_url_path='/')
+app = Flask(__name__)
 
 def create_app():
     

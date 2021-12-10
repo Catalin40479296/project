@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, redirect, url_for
 from flask_login import login_required, current_user
 from datetime import date
-from __init__ import db
+from init import db
 
 from models import ActiveWorkouts
 

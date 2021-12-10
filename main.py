@@ -4,10 +4,11 @@ from datetime import date
 from init import db, create_app
 
 from models import ActiveWorkouts
+app=create_app()
 
 main = Blueprint('main', __name__)
 
-app=create_app()
+
 
 #index page, rendering active workouts and giving date, workouts found on the user id and the name of the use
 @main.route('/')
